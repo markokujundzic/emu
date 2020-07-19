@@ -1,0 +1,74 @@
+                                         / *** Symbol Table *** /
+NAME      SECTION   SCOPE     SECTION   EXTERN    ABSOLUTE  EQU       DEPEND.   VALUE     SIZE      ENTRY     
+.und      .und      LOCAL     true      false     false     false     N/A       0         0         0         
+.abs      .abs      LOCAL     true      false     false     false     N/A       0         0         1         
+.text     .text     LOCAL     true      false     false     false     N/A       0         0X33      2         
+iv_table  iv_table  LOCAL     true      false     false     false     N/A       0         0X10      3         
+entries   entries   LOCAL     true      false     false     false     N/A       0         0X83      4         
+_start    .text     GLOBAL    false     false     false     false     N/A       0X2E      0         5         
+print     .text     LOCAL     false     false     false     false     N/A       0         0         6         
+return    .text     LOCAL     false     false     false     false     N/A       0X29      0         7         
+zero      .abs      LOCAL     false     false     true      true      N/A       0X30      0         8         
+data_out  .abs      LOCAL     false     false     true      true      N/A       0XFF00    0         9         
+ivt_0     entries   LOCAL     false     false     false     false     N/A       0         0         10        
+ivt_1     entries   LOCAL     false     false     false     false     N/A       0XC       0         11        
+ivt_2     entries   LOCAL     false     false     false     false     N/A       0XD       0         12        
+ivt_3     entries   LOCAL     false     false     false     false     N/A       0XE       0         13        
+ivt_4     entries   LOCAL     false     false     false     false     N/A       0X7F      0         14        
+ivt_5     entries   LOCAL     false     false     false     false     N/A       0X80      0         15        
+ivt_6     entries   LOCAL     false     false     false     false     N/A       0X81      0         16        
+ivt_7     entries   LOCAL     false     false     false     false     N/A       0X82      0         17        
+data_in   .abs      LOCAL     false     false     true      true      N/A       0XFF02    0         18        
+timer_cfg .abs      LOCAL     false     false     true      true      N/A       0XFF10    0         19        
+one       .abs      LOCAL     false     false     true      true      N/A       0X31      0         20        
+space     .abs      LOCAL     false     false     true      true      N/A       0X20      0         21        
+new_line  .abs      LOCAL     false     false     true      true      N/A       0XA       0         22        
+start     entries   LOCAL     false     false     false     false     N/A       0X2F      0         23        
+exit_2    entries   LOCAL     false     false     false     false     N/A       0X6C      0         24        
+loop      entries   LOCAL     false     false     false     false     N/A       0X32      0         25        
+calc      entries   LOCAL     false     false     false     false     N/A       0X50      0         26        
+exit_3    entries   LOCAL     false     false     false     false     N/A       0X74      0         27        
+help      entries   LOCAL     false     false     false     false     N/A       0X60      0         28        
+
+#.text
+4C 26 4C 2A 64 20 26 34 00 29 00 64 26 2A CC 00 0A 00 2A 84 00 0A 00 26 64 26 20 24 00 00 00 6C 00 30 00
+2A 64 2A 80 00 FF 54 2A 54 26 10 2C 00 00 00 00 
+
+#.ret .text
+OFFSET         TYPE           VALUE          
+0X9            R_386_16       2              
+0X1D           R_386_16       2              
+0X30           R_386_16       5              
+
+#iv_table
+00 00 0C 00 0D 00 0E 00 7F 00 80 00 81 00 82 00 
+
+#.ret iv_table
+OFFSET         TYPE           VALUE          
+0              R_386_16       4              
+0X2            R_386_16       4              
+0X4            R_386_16       4              
+0X6            R_386_16       4              
+0X8            R_386_16       4              
+0XA            R_386_16       4              
+0XC            R_386_16       4              
+0XE            R_386_16       4              
+
+#entries
+64 00 01 00 80 10 FF 64 00 00 00 2E 00 08 8C 00 0A 00 80 02 FF 34 00 2F 00 7C 00 0A 00 2A 64 80 02 FF 26
+74 00 30 00 26 6C 26 2A 2C 00 6C 00 64 2A 28 8C 00 00 00 2A 34 00 50 00 74 00 01 00 2A 8C 00 00 00 2A 34
+00 50 00 7C 2A 28 2C 00 32 00 64 28 20 8C 00 00 00 28 34 00 74 00 24 00 00 00 64 00 00 00 2A 64 00 0A 00
+80 00 FF 64 00 00 00 80 02 FF 08 64 00 31 00 80 00 FF 2C 00 60 00 08 08 08 08 
+
+#.ret entries
+OFFSET         TYPE           VALUE          
+0X9            R_386_16       5              
+0X17           R_386_16       4              
+0X2D           R_386_16       4              
+0X39           R_386_16       4              
+0X47           R_386_16       4              
+0X4E           R_386_16       4              
+0X5A           R_386_16       4              
+0X5E           R_386_16       2              
+0X7D           R_386_16       4              
+

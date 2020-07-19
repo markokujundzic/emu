@@ -1,0 +1,47 @@
+                                         / *** Symbol Table *** /
+NAME      SECTION   SCOPE     SECTION   EXTERN    ABSOLUTE  EQU       DEPEND.   VALUE     SIZE      ENTRY     
+.und      .und      LOCAL     true      false     false     false     N/A       0         0         0         
+.abs      .abs      LOCAL     true      false     false     false     N/A       0         0         1         
+.text     .text     LOCAL     true      false     false     false     N/A       0         0X4       2         
+iv_table  iv_table  LOCAL     true      false     false     false     N/A       0         0X10      3         
+entries   entries   LOCAL     true      false     false     false     N/A       0         0X1A      4         
+_start    .text     GLOBAL    false     false     false     false     N/A       0         0         5         
+ivt_0     entries   LOCAL     false     false     false     false     N/A       0         0         6         
+ivt_1     entries   LOCAL     false     false     false     false     N/A       0X5       0         7         
+ivt_2     entries   LOCAL     false     false     false     false     N/A       0X6       0         8         
+ivt_3     entries   LOCAL     false     false     false     false     N/A       0X7       0         9         
+ivt_4     entries   LOCAL     false     false     false     false     N/A       0X16      0         10        
+ivt_5     entries   LOCAL     false     false     false     false     N/A       0X17      0         11        
+ivt_6     entries   LOCAL     false     false     false     false     N/A       0X18      0         12        
+ivt_7     entries   LOCAL     false     false     false     false     N/A       0X19      0         13        
+data_in   .abs      LOCAL     false     false     true      true      N/A       0XFF02    0         14        
+data_out  .abs      LOCAL     false     false     true      true      N/A       0XFF00    0         15        
+
+#.text
+2C 00 00 00 
+
+#.ret .text
+OFFSET         TYPE           VALUE          
+0X2            R_386_16       5              
+
+#iv_table
+00 00 05 00 06 00 07 00 16 00 17 00 18 00 19 00 
+
+#.ret iv_table
+OFFSET         TYPE           VALUE          
+0              R_386_16       4              
+0X2            R_386_16       4              
+0X4            R_386_16       4              
+0X6            R_386_16       4              
+0X8            R_386_16       4              
+0XA            R_386_16       4              
+0XC            R_386_16       4              
+0XE            R_386_16       4              
+
+#entries
+64 00 00 00 2E 00 08 64 80 02 FF 80 00 FF 64 00 00 00 80 02 FF 08 08 08 08 08 
+
+#.ret entries
+OFFSET         TYPE           VALUE          
+0X2            R_386_16       5              
+
