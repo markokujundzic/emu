@@ -1,2 +1,2 @@
-# interpretative_emulator - System Programmming course
-Implementation of interpretative emulator for 16-bit architecture in C++ tested on Linux Ubuntu 20.04 LTS
+# emulator - System Programmming course
+Implementation of emulator for 16-bit architecture, emulating the execution of assembly instructions w/ terminal + timer peripheries in C++ tested on Linux Ubuntu 20.04 LTS
