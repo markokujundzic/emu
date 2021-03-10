@@ -86,9 +86,9 @@ unordered_map<string, regex> Parser::patching =
 
 unordered_map<string, instruction_data> Parser::instructions =
 {
-	{ "HALT", { regex("halt"),		0x00, 0 } },
-	{ "IRET", { regex("iret"),		0x01, 0 } },
-	{ "RET",  { regex("ret"),		0x02, 0 } },
+	{ "HALT", { regex("halt"),	0x00, 0 } },
+	{ "IRET", { regex("iret"),	0x01, 0 } },
+	{ "RET",  { regex("ret"),	0x02, 0 } },
 	{ "INT",  { regex("int[bw]?"),	0x03, 1 } },
 	{ "CALL", { regex("call[bw]?"),	0x04, 1 } },
 	{ "JMP",  { regex("jmp[bw]?"),	0x05, 1 } },
@@ -120,7 +120,7 @@ unordered_map<string, regex> Parser::directives =
 	{ ".EXTERN",  regex("\\.extern")  },
 	{ ".SECTION", regex("\\.section") },
 	{ ".END",     regex("\\.end")     },
-	{ ".BYTE",	  regex("\\.byte")    },
+	{ ".BYTE",    regex("\\.byte")    },
 	{ ".WORD",    regex("\\.word")    },
 	{ ".SKIP",    regex("\\.skip")    },
 	{ ".EQU",     regex("\\.equ")     }
